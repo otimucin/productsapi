@@ -1,0 +1,162 @@
+[2017-12-25 22:01:46.3683][WISGNBT50][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-25 22:04:49.9850][WISGNBT50][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-25 22:04:50.7486][WISGNBT50][Info] Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory'); 
+[2017-12-25 22:04:50.8856][WISGNBT50][Info] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory'); 
+[2017-12-25 22:04:50.9022][WISGNBT50][Info] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId"; 
+[2017-12-25 22:04:50.9092][WISGNBT50][Info] Applying migration '20171224130015_ProductsApiMigration'. 
+[2017-12-25 22:04:51.6767][WISGNBT50][Error] Failed executing DbCommand (707ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "Products" (
+    "Id" serial NOT NULL,
+    "CreatedDate" timestamp NOT NULL,
+    "ModifiedDate" timestamp NOT NULL,
+    "Price" float8 NOT NULL,
+    "Title" text NULL,
+    CONSTRAINT "PK_Products" PRIMARY KEY ("Id")
+); 42P07: relation "Products" already exists
+[2017-12-25 22:14:03.3843][WISGNBT50][Info] Application started... 
+[2017-12-25 22:14:03.7422][WISGNBT50][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product   
+[2017-12-25 22:14:04.1533][WISGNBT50][Info] Authorization failed for user: (null). 
+[2017-12-25 22:14:04.1533][WISGNBT50][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-25 22:14:04.1703][WISGNBT50][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-25 22:14:04.1703][WISGNBT50][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-25 22:14:04.1902][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 70.1567ms 
+[2017-12-25 22:14:04.2278][WISGNBT50][Info] Request finished in 538.4412ms 401  
+[2017-12-25 22:14:21.5206][WISGNBT50][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product/1 application/json  
+[2017-12-25 22:14:21.6899][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:14:21.7006][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:14:21.7006][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:14:21.8154][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.Get (ProductsApi) with arguments (1) - ModelState is Valid 
+[2017-12-25 22:14:26.3455][WISGNBT50][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-25 22:14:26.9748][WISGNBT50][Info] Executed DbCommand (19ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "k"."Id", "k"."CreatedDate", "k"."ModifiedDate", "k"."Price", "k"."Title"
+FROM "Products" AS "k"
+WHERE "k"."Id" = @__id_0
+LIMIT 1 
+[2017-12-25 22:14:27.0507][WISGNBT50][Info] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+[2017-12-25 22:14:27.0937][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.Get (ProductsApi) in 5515.1244ms 
+[2017-12-25 22:14:27.0937][WISGNBT50][Info] Request finished in 5586.2977ms 200 application/json; charset=utf-8 
+[2017-12-25 22:14:39.7032][WISGNBT50][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product/bilgisayar application/json  
+[2017-12-25 22:14:39.7032][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:14:39.7195][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:14:39.7195][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:14:39.7731][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.Get (ProductsApi) with arguments (0) - ModelState is Invalid 
+[2017-12-25 22:14:53.5082][WISGNBT50][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-25 22:14:53.5182][WISGNBT50][Info] Executed DbCommand (0ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "k"."Id", "k"."CreatedDate", "k"."ModifiedDate", "k"."Price", "k"."Title"
+FROM "Products" AS "k"
+WHERE "k"."Id" = @__id_0
+LIMIT 1 
+[2017-12-25 22:14:53.5182][WISGNBT50][Info] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+[2017-12-25 22:14:53.5331][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.Get (ProductsApi) in 13821.2928ms 
+[2017-12-25 22:14:53.5331][WISGNBT50][Info] Request finished in 13837.3323ms 204  
+[2017-12-25 22:15:30.0808][WISGNBT50][Info] Application started... 
+[2017-12-25 22:15:30.4994][WISGNBT50][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product   
+[2017-12-25 22:15:30.7880][WISGNBT50][Info] Authorization failed for user: (null). 
+[2017-12-25 22:15:30.8018][WISGNBT50][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-25 22:15:30.8161][WISGNBT50][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-25 22:15:30.8307][WISGNBT50][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-25 22:15:30.8307][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 80.0374ms 
+[2017-12-25 22:15:30.8642][WISGNBT50][Info] Request finished in 390.428ms 401  
+[2017-12-25 22:15:31.2683][WISGNBT50][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product/1 application/json  
+[2017-12-25 22:15:31.4360][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:15:31.4360][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:15:31.4594][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:15:31.5860][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.Get (ProductsApi) with arguments (1) - ModelState is Valid 
+[2017-12-25 22:15:33.3590][WISGNBT50][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-25 22:15:34.0356][WISGNBT50][Info] Executed DbCommand (25ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "k"."Id", "k"."CreatedDate", "k"."ModifiedDate", "k"."Price", "k"."Title"
+FROM "Products" AS "k"
+WHERE "k"."Id" = @__id_0
+LIMIT 1 
+[2017-12-25 22:15:34.1625][WISGNBT50][Info] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+[2017-12-25 22:15:34.2102][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.Get (ProductsApi) in 2883.9416ms 
+[2017-12-25 22:15:34.2277][WISGNBT50][Info] Request finished in 2957.8611ms 200 application/json; charset=utf-8 
+[2017-12-25 22:15:43.8605][WISGNBT50][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product/title_bilgisayar application/json  
+[2017-12-25 22:15:43.8736][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:15:43.8736][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:15:43.8984][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:15:43.9471][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.Get (ProductsApi) with arguments (0) - ModelState is Invalid 
+[2017-12-25 22:16:29.1511][WISGNBT50][Info] Application started... 
+[2017-12-25 22:16:29.6212][WISGNBT50][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product   
+[2017-12-25 22:16:29.8440][WISGNBT50][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product/title_bilgisayar application/json  
+[2017-12-25 22:16:30.1086][WISGNBT50][Info] Authorization failed for user: (null). 
+[2017-12-25 22:16:30.1086][WISGNBT50][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-25 22:16:30.1477][WISGNBT50][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-25 22:16:30.1611][WISGNBT50][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-25 22:16:30.1759][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 110.4848ms 
+[2017-12-25 22:16:30.2097][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:16:30.2239][WISGNBT50][Info] Request finished in 683.2357ms 401  
+[2017-12-25 22:16:30.2892][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:16:30.3151][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:16:30.6351][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.Get (ProductsApi) with arguments (0) - ModelState is Invalid 
+[2017-12-25 22:16:38.6730][WISGNBT50][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-25 22:16:39.2915][WISGNBT50][Info] Executed DbCommand (30ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "k"."Id", "k"."CreatedDate", "k"."ModifiedDate", "k"."Price", "k"."Title"
+FROM "Products" AS "k"
+WHERE "k"."Id" = @__id_0
+LIMIT 1 
+[2017-12-25 22:16:39.3256][WISGNBT50][Info] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+[2017-12-25 22:16:39.3256][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.Get (ProductsApi) in 9269.6806ms 
+[2017-12-25 22:16:39.3593][WISGNBT50][Info] Request finished in 9503.6481ms 204  
+[2017-12-25 22:17:27.9229][WISGNBT50][Info] Application started... 
+[2017-12-25 22:17:28.3027][WISGNBT50][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product   
+[2017-12-25 22:17:28.5467][WISGNBT50][Info] Authorization failed for user: (null). 
+[2017-12-25 22:17:28.5467][WISGNBT50][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-25 22:17:28.5653][WISGNBT50][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-25 22:17:28.5762][WISGNBT50][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-25 22:17:28.5762][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 61.3109ms 
+[2017-12-25 22:17:28.6063][WISGNBT50][Info] Request finished in 331.4584ms 401  
+[2017-12-25 22:17:52.3873][WISGNBT50][Info] Request starting HTTP/1.1 PUT http://localhost:2462/api/product/ application/json 54 
+[2017-12-25 22:17:52.4064][WISGNBT50][Info] Request finished in 21.291ms 404  
+[2017-12-25 22:18:18.2273][WISGNBT50][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/product/ application/json 54 
+[2017-12-25 22:18:18.3309][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:18:18.3405][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:18:18.3405][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:18:18.4937][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) with arguments (ProductsApi.Model.Product) - ModelState is Valid 
+[2017-12-25 22:18:18.7213][WISGNBT50][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-25 22:18:19.2249][WISGNBT50][Info] Executed DbCommand (37ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Products" ("CreatedDate", "ModifiedDate", "Price", "Title")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id"; 
+[2017-12-25 22:18:19.2744][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) in 1009.0354ms 
+[2017-12-25 22:18:19.2925][WISGNBT50][Info] Request finished in 1062.2785ms 200  
+[2017-12-25 22:18:54.5171][WISGNBT50][Info] Request starting HTTP/1.1 PUT http://localhost:2462/api/product/6 application/json 54 
+[2017-12-25 22:18:54.5297][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:18:54.5297][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:18:54.5514][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:18:54.5828][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.UpdateProduct (ProductsApi) with arguments (6, ProductsApi.Model.Product) - ModelState is Valid 
+[2017-12-25 22:18:54.6135][WISGNBT50][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-25 22:18:54.6320][WISGNBT50][Info] Executed DbCommand (5ms) [Parameters=[@p4='?', @p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Products" SET "CreatedDate" = @p0, "ModifiedDate" = @p1, "Price" = @p2, "Title" = @p3
+WHERE "Id" = @p4; 
+[2017-12-25 22:18:54.6434][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.UpdateProduct (ProductsApi) in 113.9993ms 
+[2017-12-25 22:18:54.6434][WISGNBT50][Info] Request finished in 133.2427ms 200  
+[2017-12-25 22:19:14.5113][WISGNBT50][Info] Request starting HTTP/1.1 DELETE http://localhost:2462/api/product/6 application/json 54 
+[2017-12-25 22:19:14.5224][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:19:14.5393][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:19:14.5474][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:19:14.5732][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.Delete (ProductsApi) with arguments (6) - ModelState is Valid 
+[2017-12-25 22:19:14.5890][WISGNBT50][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-25 22:19:14.5997][WISGNBT50][Info] Executed DbCommand (0ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+DELETE FROM "Products"
+WHERE "Id" = @p0; 
+[2017-12-25 22:19:14.6112][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.Delete (ProductsApi) in 87.3609ms 
+[2017-12-25 22:19:14.6385][WISGNBT50][Info] Request finished in 109.5327ms 200  
+[2017-12-25 22:20:21.4622][WISGNBT50][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/product/ application/json 57 
+[2017-12-25 22:20:21.4801][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:20:21.5188][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:20:21.5321][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:20:21.5638][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) with arguments () - ModelState is Invalid 
+[2017-12-25 22:21:06.0107][WISGNBT50][Info] Executed action ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) in 44507.8129ms 
+[2017-12-25 22:21:06.1245][WISGNBT50][Error] An unhandled exception has occurred while executing the request Object reference not set to an instance of an object.
+[2017-12-25 22:21:06.2649][WISGNBT50][Info] Request finished in 44800.9235ms 500 text/html; charset=utf-8 
+[2017-12-25 22:21:16.5034][WISGNBT50][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/product/ application/json 54 
+[2017-12-25 22:21:16.5034][WISGNBT50][Info] Successfully validated the token. 
+[2017-12-25 22:21:16.5272][WISGNBT50][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-25 22:21:16.5372][WISGNBT50][Info] Authorization was successful for user: ozgun@test.com. 
+[2017-12-25 22:21:16.5619][WISGNBT50][Info] Executing action method ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) with arguments (ProductsApi.Model.Product) - ModelState is Valid 

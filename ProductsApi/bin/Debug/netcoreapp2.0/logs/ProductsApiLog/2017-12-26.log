@@ -1,0 +1,291 @@
+[2017-12-26 00:13:21.2627][WISGNYAZILIM85][Info] Application started... 
+[2017-12-26 00:13:21.9700][WISGNYAZILIM85][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product   
+[2017-12-26 00:13:23.4285][WISGNYAZILIM85][Info] Authorization failed for user: (null). 
+[2017-12-26 00:13:23.4712][WISGNYAZILIM85][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-26 00:13:23.5158][WISGNYAZILIM85][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-26 00:13:23.5642][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-26 00:13:23.6126][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 316.8606ms 
+[2017-12-26 00:13:23.7808][WISGNYAZILIM85][Info] Request finished in 2019.3513ms 401  
+[2017-12-26 00:17:56.3654][WISGNYAZILIM85][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product   
+[2017-12-26 00:17:56.5328][WISGNYAZILIM85][Info] Authorization failed for user: (null). 
+[2017-12-26 00:17:56.6137][WISGNYAZILIM85][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-26 00:17:56.6933][WISGNYAZILIM85][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-26 00:17:56.7372][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-26 00:17:56.7804][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 370.681ms 
+[2017-12-26 00:17:56.8242][WISGNYAZILIM85][Info] Request finished in 460.7789ms 401  
+[2017-12-26 00:18:13.3741][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/product  0 
+[2017-12-26 00:18:13.5636][WISGNYAZILIM85][Info] Authorization failed for user: (null). 
+[2017-12-26 00:18:13.6437][WISGNYAZILIM85][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-26 00:18:13.7226][WISGNYAZILIM85][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-26 00:18:13.7654][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-26 00:18:13.8088][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) in 246.153ms 
+[2017-12-26 00:18:13.8530][WISGNYAZILIM85][Info] Request finished in 478.9499ms 401  
+[2017-12-26 00:20:14.1210][WISGNYAZILIM85][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-26 00:25:57.9013][WISGNYAZILIM85][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-26 00:25:58.7742][WISGNYAZILIM85][Info] Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory'); 
+[2017-12-26 00:25:59.1502][WISGNYAZILIM85][Info] Executed DbCommand (121ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" varchar(150) NOT NULL,
+    "ProductVersion" varchar(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+); 
+[2017-12-26 00:25:59.3627][WISGNYAZILIM85][Info] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory'); 
+[2017-12-26 00:25:59.3699][WISGNYAZILIM85][Info] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId"; 
+[2017-12-26 00:25:59.3699][WISGNYAZILIM85][Info] Applying migration '20171224130049_ApplicationDbMigration'. 
+[2017-12-26 00:25:59.4538][WISGNYAZILIM85][Info] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" text NOT NULL,
+    "ConcurrencyStamp" text NULL,
+    "Name" varchar(256) NULL,
+    "NormalizedName" varchar(256) NULL,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+); 
+[2017-12-26 00:25:59.4818][WISGNYAZILIM85][Info] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "AspNetUsers" (
+    "Id" text NOT NULL,
+    "AccessFailedCount" int4 NOT NULL,
+    "ConcurrencyStamp" text NULL,
+    "Email" varchar(256) NULL,
+    "EmailConfirmed" bool NOT NULL,
+    "LockoutEnabled" bool NOT NULL,
+    "LockoutEnd" timestamptz NULL,
+    "NormalizedEmail" varchar(256) NULL,
+    "NormalizedUserName" varchar(256) NULL,
+    "PasswordHash" text NULL,
+    "PhoneNumber" text NULL,
+    "PhoneNumberConfirmed" bool NOT NULL,
+    "SecurityStamp" text NULL,
+    "TwoFactorEnabled" bool NOT NULL,
+    "UserName" varchar(256) NULL,
+    CONSTRAINT "PK_AspNetUsers" PRIMARY KEY ("Id")
+); 
+[2017-12-26 00:25:59.5525][WISGNYAZILIM85][Info] Executed DbCommand (65ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "AspNetRoleClaims" (
+    "Id" serial NOT NULL,
+    "ClaimType" text NULL,
+    "ClaimValue" text NULL,
+    "RoleId" text NOT NULL,
+    CONSTRAINT "PK_AspNetRoleClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetRoleClaims_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE
+); 
+[2017-12-26 00:25:59.5860][WISGNYAZILIM85][Info] Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "AspNetUserClaims" (
+    "Id" serial NOT NULL,
+    "ClaimType" text NULL,
+    "ClaimValue" text NULL,
+    "UserId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUserClaims_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+); 
+[2017-12-26 00:25:59.6167][WISGNYAZILIM85][Info] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "AspNetUserLogins" (
+    "LoginProvider" text NOT NULL,
+    "ProviderKey" text NOT NULL,
+    "ProviderDisplayName" text NULL,
+    "UserId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserLogins" PRIMARY KEY ("LoginProvider", "ProviderKey"),
+    CONSTRAINT "FK_AspNetUserLogins_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+); 
+[2017-12-26 00:25:59.6475][WISGNYAZILIM85][Info] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "AspNetUserRoles" (
+    "UserId" text NOT NULL,
+    "RoleId" text NOT NULL,
+    CONSTRAINT "PK_AspNetUserRoles" PRIMARY KEY ("UserId", "RoleId"),
+    CONSTRAINT "FK_AspNetUserRoles_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+); 
+[2017-12-26 00:25:59.6768][WISGNYAZILIM85][Info] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "AspNetUserTokens" (
+    "UserId" text NOT NULL,
+    "LoginProvider" text NOT NULL,
+    "Name" text NOT NULL,
+    "Value" text NULL,
+    CONSTRAINT "PK_AspNetUserTokens" PRIMARY KEY ("UserId", "LoginProvider", "Name"),
+    CONSTRAINT "FK_AspNetUserTokens_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+); 
+[2017-12-26 00:25:59.6927][WISGNYAZILIM85][Info] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_AspNetRoleClaims_RoleId" ON "AspNetRoleClaims" ("RoleId"); 
+[2017-12-26 00:25:59.7083][WISGNYAZILIM85][Info] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "RoleNameIndex" ON "AspNetRoles" ("NormalizedName"); 
+[2017-12-26 00:25:59.7240][WISGNYAZILIM85][Info] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserClaims_UserId" ON "AspNetUserClaims" ("UserId"); 
+[2017-12-26 00:25:59.7390][WISGNYAZILIM85][Info] Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserLogins_UserId" ON "AspNetUserLogins" ("UserId"); 
+[2017-12-26 00:25:59.7533][WISGNYAZILIM85][Info] Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserRoles_RoleId" ON "AspNetUserRoles" ("RoleId"); 
+[2017-12-26 00:25:59.7723][WISGNYAZILIM85][Info] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX "EmailIndex" ON "AspNetUsers" ("NormalizedEmail"); 
+[2017-12-26 00:25:59.7867][WISGNYAZILIM85][Info] Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX "UserNameIndex" ON "AspNetUsers" ("NormalizedUserName"); 
+[2017-12-26 00:25:59.7939][WISGNYAZILIM85][Info] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20171224130049_ApplicationDbMigration', '2.0.1-rtm-125'); 
+[2017-12-26 00:26:52.7699][WISGNYAZILIM85][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-26 00:26:53.6027][WISGNYAZILIM85][Info] Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory'); 
+[2017-12-26 00:26:53.8177][WISGNYAZILIM85][Info] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory'); 
+[2017-12-26 00:26:53.8302][WISGNYAZILIM85][Info] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId"; 
+[2017-12-26 00:26:53.8408][WISGNYAZILIM85][Info] Applying migration '20171224130015_ProductsApiMigration'. 
+[2017-12-26 00:26:53.9147][WISGNYAZILIM85][Info] Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "Products" (
+    "Id" serial NOT NULL,
+    "CreatedDate" timestamp NOT NULL,
+    "ModifiedDate" timestamp NOT NULL,
+    "Price" float8 NOT NULL,
+    "Title" text NULL,
+    CONSTRAINT "PK_Products" PRIMARY KEY ("Id")
+); 
+[2017-12-26 00:26:53.9212][WISGNYAZILIM85][Info] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20171224130015_ProductsApiMigration', '2.0.1-rtm-125'); 
+[2017-12-26 00:28:01.3984][WISGNYAZILIM85][Info] Application started... 
+[2017-12-26 00:28:01.9312][WISGNYAZILIM85][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product   
+[2017-12-26 00:28:03.3093][WISGNYAZILIM85][Info] Authorization failed for user: (null). 
+[2017-12-26 00:28:03.3551][WISGNYAZILIM85][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-26 00:28:03.4021][WISGNYAZILIM85][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-26 00:28:03.4526][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-26 00:28:03.5038][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 310.0352ms 
+[2017-12-26 00:28:03.6549][WISGNYAZILIM85][Info] Request finished in 1843.6433ms 401  
+[2017-12-26 00:28:05.0469][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/product  0 
+[2017-12-26 00:28:05.2144][WISGNYAZILIM85][Info] Authorization failed for user: (null). 
+[2017-12-26 00:28:05.2588][WISGNYAZILIM85][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-26 00:28:05.3034][WISGNYAZILIM85][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-26 00:28:05.3485][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-26 00:28:05.3930][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) in 179.1253ms 
+[2017-12-26 00:28:05.4380][WISGNYAZILIM85][Info] Request finished in 391.5548ms 401  
+[2017-12-26 00:32:06.8622][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/product application/json 34 
+[2017-12-26 00:32:06.9075][WISGNYAZILIM85][Info] Authorization failed for user: (null). 
+[2017-12-26 00:32:06.9870][WISGNYAZILIM85][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-26 00:32:07.0330][WISGNYAZILIM85][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-26 00:32:07.0776][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-26 00:32:07.1216][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) in 215.0304ms 
+[2017-12-26 00:32:07.2090][WISGNYAZILIM85][Info] Request finished in 346.6066ms 401  
+[2017-12-26 00:32:43.2461][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/product application/json 35 
+[2017-12-26 00:32:43.2915][WISGNYAZILIM85][Info] Authorization failed for user: (null). 
+[2017-12-26 00:32:43.3703][WISGNYAZILIM85][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-26 00:32:43.4488][WISGNYAZILIM85][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-26 00:32:43.4930][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-26 00:32:43.5382][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) in 246.7855ms 
+[2017-12-26 00:32:43.5864][WISGNYAZILIM85][Info] Request finished in 337.9619ms 401  
+[2017-12-26 00:37:36.5396][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/Acount/Register application/json 59 
+[2017-12-26 00:37:36.5501][WISGNYAZILIM85][Info] Request finished in 10.9706ms 404  
+[2017-12-26 00:38:57.2324][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/Account/Register application/json 59 
+[2017-12-26 00:38:57.2324][WISGNYAZILIM85][Info] Request finished in 9.0205ms 404  
+[2017-12-26 00:39:26.7781][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/Account/Register application/json 59 
+[2017-12-26 00:39:26.7913][WISGNYAZILIM85][Info] Request finished in 12.3908ms 404  
+[2017-12-26 00:40:44.1645][WISGNYAZILIM85][Info] Application started... 
+[2017-12-26 00:40:44.6991][WISGNYAZILIM85][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product   
+[2017-12-26 00:40:46.1023][WISGNYAZILIM85][Info] Authorization failed for user: (null). 
+[2017-12-26 00:40:46.1486][WISGNYAZILIM85][Info] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2017-12-26 00:40:46.1983][WISGNYAZILIM85][Info] Executing ChallengeResult with authentication schemes (Bearer). 
+[2017-12-26 00:40:46.2496][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was challenged. 
+[2017-12-26 00:40:46.3002][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 315.4532ms 
+[2017-12-26 00:40:46.4530][WISGNYAZILIM85][Info] Request finished in 1878.0772ms 401  
+[2017-12-26 00:41:12.1215][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/Account/Register application/json 59 
+[2017-12-26 00:41:12.6931][WISGNYAZILIM85][Info] Executing action method ProductsApi.Controllers.AccountController.Register (ProductsApi) with arguments (ProductsApi.Model.Register) - ModelState is Valid 
+[2017-12-26 00:41:22.2791][WISGNYAZILIM85][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-26 00:41:23.4457][WISGNYAZILIM85][Info] Executed DbCommand (41ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "AspNetUsers" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1 
+[2017-12-26 00:41:23.6284][WISGNYAZILIM85][Info] Executed DbCommand (18ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?', @p12='?', @p13='?', @p14='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14); 
+[2017-12-26 00:41:31.8723][WISGNYAZILIM85][Info] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "uc"."Id", "uc"."ClaimType", "uc"."ClaimValue", "uc"."UserId"
+FROM "AspNetUserClaims" AS "uc"
+WHERE "uc"."UserId" = @__user_Id_0 
+[2017-12-26 00:41:32.0356][WISGNYAZILIM85][Info] Executed DbCommand (42ms) [Parameters=[@__userId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "role"."Name"
+FROM "AspNetUserRoles" AS "userRole"
+INNER JOIN "AspNetRoles" AS "role" ON "userRole"."RoleId" = "role"."Id"
+WHERE "userRole"."UserId" = @__userId_0 
+[2017-12-26 00:41:32.0941][WISGNYAZILIM85][Info] AuthenticationScheme: Identity.Application signed in. 
+[2017-12-26 00:41:33.6947][WISGNYAZILIM85][Info] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+[2017-12-26 00:41:33.8687][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.AccountController.Register (ProductsApi) in 21568.9768ms 
+[2017-12-26 00:41:33.9211][WISGNYAZILIM85][Info] Request finished in 21799.3203ms 200 text/plain; charset=utf-8 
+[2017-12-26 00:42:10.4100][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/api/product application/json 35 
+[2017-12-26 00:42:10.5043][WISGNYAZILIM85][Info] Successfully validated the token. 
+[2017-12-26 00:42:10.5857][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-26 00:42:10.6666][WISGNYAZILIM85][Info] Authorization was successful for user: otimucin@hurriyet.com.tr. 
+[2017-12-26 00:42:10.7295][WISGNYAZILIM85][Info] Executing action method ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) with arguments (ProductsApi.Model.Product) - ModelState is Valid 
+[2017-12-26 00:42:10.8978][WISGNYAZILIM85][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-26 00:42:11.0113][WISGNYAZILIM85][Info] Executed DbCommand (18ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Products" ("CreatedDate", "ModifiedDate", "Price", "Title")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id"; 
+[2017-12-26 00:42:11.0845][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.AddProduct (ProductsApi) in 625.7557ms 
+[2017-12-26 00:42:11.1314][WISGNYAZILIM85][Info] Request finished in 722.6029ms 200  
+[2017-12-26 00:43:27.6234][WISGNYAZILIM85][Info] Request starting HTTP/1.1 POST http://localhost:2462/Account/Login application/json 59 
+[2017-12-26 00:43:28.0426][WISGNYAZILIM85][Info] Executing action method ProductsApi.Controllers.AccountController.Login (ProductsApi) with arguments (ProductsApi.Model.Login) - ModelState is Valid 
+[2017-12-26 00:43:28.1273][WISGNYAZILIM85][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-26 00:43:28.2137][WISGNYAZILIM85][Info] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "AspNetUsers" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1 
+[2017-12-26 00:43:28.3072][WISGNYAZILIM85][Info] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "uc"."Id", "uc"."ClaimType", "uc"."ClaimValue", "uc"."UserId"
+FROM "AspNetUserClaims" AS "uc"
+WHERE "uc"."UserId" = @__user_Id_0 
+[2017-12-26 00:43:28.3565][WISGNYAZILIM85][Info] Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "role"."Name"
+FROM "AspNetUserRoles" AS "userRole"
+INNER JOIN "AspNetRoles" AS "role" ON "userRole"."RoleId" = "role"."Id"
+WHERE "userRole"."UserId" = @__userId_0 
+[2017-12-26 00:43:28.4036][WISGNYAZILIM85][Info] AuthenticationScheme: Identity.Application signed in. 
+[2017-12-26 00:43:28.4623][WISGNYAZILIM85][Info] Executed DbCommand (0ms) [Parameters=[@__model_Email_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT "r"."Id", "r"."AccessFailedCount", "r"."ConcurrencyStamp", "r"."Email", "r"."EmailConfirmed", "r"."LockoutEnabled", "r"."LockoutEnd", "r"."NormalizedEmail", "r"."NormalizedUserName", "r"."PasswordHash", "r"."PhoneNumber", "r"."PhoneNumberConfirmed", "r"."SecurityStamp", "r"."TwoFactorEnabled", "r"."UserName"
+FROM "AspNetUsers" AS "r"
+WHERE "r"."Email" = @__model_Email_0
+LIMIT 2 
+[2017-12-26 00:43:28.5106][WISGNYAZILIM85][Info] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+[2017-12-26 00:43:28.5566][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.AccountController.Login (ProductsApi) in 881.5823ms 
+[2017-12-26 00:43:28.6050][WISGNYAZILIM85][Info] Request finished in 980.8461ms 200 text/plain; charset=utf-8 
+[2017-12-26 00:43:51.1277][WISGNYAZILIM85][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product application/json  
+[2017-12-26 00:43:51.1759][WISGNYAZILIM85][Info] Successfully validated the token. 
+[2017-12-26 00:43:51.2580][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-26 00:43:51.3400][WISGNYAZILIM85][Info] Authorization was successful for user: otimucin@hurriyet.com.tr. 
+[2017-12-26 00:43:51.3866][WISGNYAZILIM85][Info] Executing action method ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) with arguments ((null)) - ModelState is Valid 
+[2017-12-26 00:43:51.4336][WISGNYAZILIM85][Info] Tüm Ürünler Listeleniyor 
+[2017-12-26 00:43:51.4807][WISGNYAZILIM85][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-26 00:43:51.5380][WISGNYAZILIM85][Info] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "p"."Id", "p"."CreatedDate", "p"."ModifiedDate", "p"."Price", "p"."Title"
+FROM "Products" AS "p" 
+[2017-12-26 00:43:51.6247][WISGNYAZILIM85][Info] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+[2017-12-26 00:43:51.6849][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 509.7757ms 
+[2017-12-26 00:43:51.7419][WISGNYAZILIM85][Info] Request finished in 604.9294ms 200 application/json; charset=utf-8 
+[2017-12-26 00:44:20.0010][WISGNYAZILIM85][Info] Request starting HTTP/1.1 PUT http://localhost:2462/api/product/1 application/json 36 
+[2017-12-26 00:44:20.0597][WISGNYAZILIM85][Info] Successfully validated the token. 
+[2017-12-26 00:44:20.1848][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-26 00:44:20.2304][WISGNYAZILIM85][Info] Authorization was successful for user: otimucin@hurriyet.com.tr. 
+[2017-12-26 00:44:20.2792][WISGNYAZILIM85][Info] Executing action method ProductsApi.Controllers.ProductController.UpdateProduct (ProductsApi) with arguments (1, ProductsApi.Model.Product) - ModelState is Valid 
+[2017-12-26 00:44:20.3258][WISGNYAZILIM85][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-26 00:44:20.3761][WISGNYAZILIM85][Info] Executed DbCommand (0ms) [Parameters=[@p4='?', @p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Products" SET "CreatedDate" = @p0, "ModifiedDate" = @p1, "Price" = @p2, "Title" = @p3
+WHERE "Id" = @p4; 
+[2017-12-26 00:44:20.4241][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.UpdateProduct (ProductsApi) in 365.6958ms 
+[2017-12-26 00:44:20.4707][WISGNYAZILIM85][Info] Request finished in 478.4205ms 200  
+[2017-12-26 00:44:33.1718][WISGNYAZILIM85][Info] Request starting HTTP/1.1 GET http://localhost:2462/api/product/ application/json  
+[2017-12-26 00:44:33.2185][WISGNYAZILIM85][Info] Successfully validated the token. 
+[2017-12-26 00:44:33.2646][WISGNYAZILIM85][Info] AuthenticationScheme: Bearer was successfully authenticated. 
+[2017-12-26 00:44:33.3103][WISGNYAZILIM85][Info] Authorization was successful for user: otimucin@hurriyet.com.tr. 
+[2017-12-26 00:44:33.3567][WISGNYAZILIM85][Info] Executing action method ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) with arguments ((null)) - ModelState is Valid 
+[2017-12-26 00:44:33.4022][WISGNYAZILIM85][Info] Tüm Ürünler Listeleniyor 
+[2017-12-26 00:44:33.4480][WISGNYAZILIM85][Info] Entity Framework Core 2.0.1-rtm-125 initialized 'ProductsApiContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+[2017-12-26 00:44:33.4942][WISGNYAZILIM85][Info] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "p"."Id", "p"."CreatedDate", "p"."ModifiedDate", "p"."Price", "p"."Title"
+FROM "Products" AS "p" 
+[2017-12-26 00:44:33.5414][WISGNYAZILIM85][Info] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+[2017-12-26 00:44:33.5879][WISGNYAZILIM85][Info] Executed action ProductsApi.Controllers.ProductController.GetAllProducts (ProductsApi) in 369.7632ms 
+[2017-12-26 00:44:33.6349][WISGNYAZILIM85][Info] Request finished in 466.3067ms 200 application/json; charset=utf-8 
